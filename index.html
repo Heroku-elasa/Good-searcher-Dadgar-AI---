@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dadgar AI | دستیار هوشمند حقوقی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @font-face {
+        font-family: 'Iransans';
+        font-weight: 400;
+        src: url('https://sevinsazeh.com/wp-content/uploads/2024/03/IRANSansWebFaNum.woff2') format('woff2'),
+             url('https://sevinsazeh.com/wp-content/uploads/2024/03/IRANSansWebFaNum.woff') format('woff');
+      }
+      @font-face {
+        font-family: 'Iransans';
+        font-weight: 700;
+        src: url('https://sevinsazeh.com/wp-content/uploads/2024/03/IRANSansWebFaNum_Bold.woff2') format('woff2'),
+             url('https://sevinsazeh.com/wp-content/uploads/2024/03/IRANSansWebFaNum_Bold.woff') format('woff');
+      }
+      @font-face {
+        font-family: 'Iransans';
+        font-weight: 900;
+        src: url('https://sevinsazeh.com/wp-content/uploads/2024/03/IRANSansWebFaNum_Black.woff2') format('woff2'),
+             url('https://sevinsazeh.com/wp-content/uploads/2024/03/IRANSansWebFaNum_Black.woff') format('woff');
+      }
+      @font-face {
+        font-family: 'Iransans';
+        font-weight: 500;
+        src: url('https://sevinsazeh.com/wp-content/uploads/2024/03/IRANSansWebFaNum_Medium.woff2') format('woff2'),
+             url('https://sevinsazeh.com/wp-content/uploads/2024/03/IRANSansWebFaNum_Medium.woff') format('woff');
+      }
+      body {
+        font-family: 'Iransans', 'Inter', sans-serif;
+        scroll-behavior: smooth;
+      }
+      .font-inter {
+         font-family: 'Inter', sans-serif;
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .strikethrough-animated {
+        color: #6ee7b7;
+      }
+      .strikethrough-animated::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #34d399;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: draw-strike 0.5s 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+      }
+
+      @keyframes draw-strike {
+        from { transform: scaleX(0); }
+        to { transform: scaleX(1); }
+      }
+
+      /* Styles for Judicial Letterhead */
+      .judicial-letterhead {
+        background: #fdfaf2; /* Light cream background */
+        border: 1px solid #dcd1b8;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        padding: 2.5rem;
+        margin-top: 1rem;
+        position: relative;
+        color: #333; /* Dark text for readability on cream background */
+      }
+      .judicial-letterhead-content.prose {
+        color: #333;
+      }
+      .judicial-letterhead-content.prose h1,
+      .judicial-letterhead-content.prose h2,
+      .judicial-letterhead-content.prose h3,
+      .judicial-letterhead-content.prose h4,
+      .judicial-letterhead-content.prose h5,
+      .judicial-letterhead-content.prose h6,
+      .judicial-letterhead-content.prose p,
+      .judicial-letterhead-content.prose strong,
+      .judicial-letterhead-content.prose ul,
+      .judicial-letterhead-content.prose ol,
+      .judicial-letterhead-content.prose li {
+          color: #333;
+      }
+      .judicial-letterhead-content.prose blockquote {
+        color: #555;
+        border-right-color: #ccc;
+        border-left-color: transparent;
+      }
+      .judicial-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px double #c0b283;
+        position: relative;
+      }
+      .judicial-emblem {
+        height: 60px;
+        margin: 0 auto;
+        filter: brightness(0.2); /* Make the black SVG icon appear dark gray */
+      }
+      .bismillah {
+        font-family: 'Iransans', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        color: #111;
+      }
+    </style>
+     <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Iransans', 'Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.17.0",
+    "marked": "https://aistudiocdn.com/marked@^14.0.0",
+    "html-to-docx": "https://aistudiocdn.com/html-to-docx@^1.8.0",
+    "mammoth": "https://aistudiocdn.com/mammoth@^1.7.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
